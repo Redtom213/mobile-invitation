@@ -361,7 +361,6 @@ footer .image-divider.fixed-height {
 /* 07.2.11 Banner Text				 			 */
 /* ----------------------------------------------*/
 .banner-text {
-    display: inline-block;
     font-family: 'MapoFlowerIsland', sans-serif;
     margin: auto;
     margin-top: 30px;
@@ -387,8 +386,6 @@ footer .image-divider.fixed-height {
 
 .banner-text.light {
     color: #FFF;
-    border-top: ridge 0.5px #e1e1e1;
-    border-bottom: ridge 0.5px #e1e1e1;
 }
 
 .banner-text.light * {
@@ -405,7 +402,6 @@ footer .image-divider.fixed-height {
 
 .banner-text.withlove {
     position: relative;
-    display: inline-block;
     font-family: 'MapoFlowerIsland', sans-serif;
     margin: auto;
     margin-top: 30px;
@@ -413,32 +409,6 @@ footer .image-divider.fixed-height {
     text-align: center
 }
 
-/*.banner-text.withlove:before {*/
-/*    display: block;*/
-/*    font-family: "fontello";*/
-/*    position: absolute;*/
-/*    font-size: 22px;*/
-/*    color: #FFF;*/
-/*    content: "\e806";*/
-/*    top: -17px;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    margin-left: 19px;*/
-/*}*/
-
 .banner-text.withlove.dark:before {
     color: #e1dddd;
 }
-
-/*.banner-text.withlove:after {*/
-/*    display: block;*/
-/*    font-family: "fontello";*/
-/*    position: absolute;*/
-/*    font-size: 22px;*/
-/*    color: #f0394d;*/
-/*    content: "\e806";*/
-/*    top: -17px;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    margin-right: 19px;*/
-/*}*/
