@@ -127,6 +127,11 @@ section h2 {
   background-position: center;
 }
 
+#call .banner p {
+  text-align: center;
+  padding: 30px 0;
+}
+
 #call .phone {
   text-align: center;
   padding: 30px 0;
