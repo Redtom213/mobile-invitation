@@ -1,5 +1,5 @@
 # mobile-invitation-2107
-demo: https://csslick.github.io/mobile-invitation-2107/  
+demo: https://redtom213.github.io/mobile-invitation/
 
 ## 모바일 청첩장 프로젝트
 1. 자료조사 및 시안제작(XD)
