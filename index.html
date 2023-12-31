@@ -158,9 +158,9 @@
           </div>
         </div>
         <div style="font-family: 'MapoFlowerIsland', sans-serif">
-                        <span>• 지하철 : 신분당선, 분당선 정자역 3번 출구에서 도보 15분 또는 마을버스 2번 이용<br>
-                            • 식사는 28층에서 오후 12시부터 가능합니다. <br>
-                            • 주차는 종일 무료입니다. 편히 있다 가세요.
+                        <span>• 지하철 : 신림선, 보라매병원(전문건설회관)역 하차, 2번 출구와 연결되어 있습니다.<br>
+                            • 주차 : 전문건설회관 지하주차장 이용, 주차는 3시간 무료입니다. <br>
+                            • 식사는 3층에서 오후 12시부터 가능합니다. <br>
                         </span>
         </div>
       </div>
@@ -179,8 +179,7 @@
               <h2 style="font-family: 'MapoFlowerIsland'">마음 전하실 곳</h2><br>
               참석이 어려우신 분들은<br> 축하의 마음을 전달해주세요.
             </div>
-            <br>
-            <div class="banner-text withlove large light animation fadeInUp animated" style="visibility: visible;">
+            <div class="banner-text withlove large dark animation fadeInUp animated" style="visibility: visible;">
               <h2 class="h4">신랑측</h2>
               <p style="margin-top: 10px;margin-bottom: 10px;font-weight: 900">신한 110-483-346116 김태병
                 <br>
@@ -192,8 +191,7 @@
                 <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(14407092977);">
               </p>
             </div>
-            <div class="banner-text withlove large light animation fadeInUp animated" style="visibility: visible;">
-              <br>
+            <div class="banner-text withlove large dark animation fadeInUp animated" style="visibility: visible;">
               <h2 class="h4">신부측</h2>
               <p style="margin-top: 10px;margin-bottom: 10px;font-weight: 900">기업 932-049578-01-018 강희종
                 <br>
@@ -204,7 +202,6 @@
                 <br>
                 <img src="https://i.imgur.com/64ZwWNj.png" style="width: 60px;cursor: pointer;border-radius: 4px;" onclick="copy_to_clipboard(0000);">
               </p>
-              <br>
             </div>
           </div>
         </div>
@@ -229,11 +226,17 @@
         zoom: 15
       };
 
-        var map = new naver.maps.Map('map-canvas', mapOptions);
-        var marker = new naver.maps.Marker({
-          position: new naver.maps.LatLng(37.4920760, 126.9243308),
-          map: map
+      var map = new naver.maps.Map('map-canvas', mapOptions);
+      var marker = new naver.maps.Marker({
+        position: new naver.maps.LatLng(37.4920760, 126.9243308),
+        map: map
+      });
+
+      function copy_to_clipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert("복사되었습니다.");
         });
+      }
     </script>
 </body>
 </html>

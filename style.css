@@ -331,7 +331,7 @@ footer .image-divider.fixed-height {
 #thank-you {
     text-align: center;
     color: #FFF;
-    font-family: 'Pacifico';
+    font-family: 'MapoFlowerIsland';
     -ms-transform: rotate(-10deg);
     -webkit-transform: rotate(-10deg);
     transform: rotate(-10deg);
@@ -351,9 +351,96 @@ footer .image-divider.fixed-height {
 }
 
 #footer-couple-name {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'MapoFlowerIsland', sans-serif;
     font-size: 20px;
     color: #FFF;
     letter-spacing: 3px;
     margin-top: 10px;
 }
+
+/* 07.2.11 Banner Text				 			 */
+/* ----------------------------------------------*/
+.banner-text {
+    display: inline-block;
+    font-family: 'MapoFlowerIsland', sans-serif;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center
+}
+
+.banner-text.small {
+    padding: 2px 30px;
+}
+
+.banner-text.medium {
+    padding: 2px 50px;
+}
+
+.banner-text.large {
+    padding: 2px 70px;
+}
+
+.banner-text.full {
+    width: 100%;
+}
+
+.banner-text.light {
+    color: #FFF;
+    border-top: ridge 0.5px #e1e1e1;
+    border-bottom: ridge 0.5px #e1e1e1;
+}
+
+.banner-text.light * {
+    color: #FFF;
+}
+
+.banner-text.dark {
+    color: #6a6a6a;
+    border-top: medium double #6a6a6a;
+    border-bottom: medium double #6a6a6a;
+}
+
+.banner-text.dark * {
+    color: #333333;
+}
+
+.banner-text.withlove {
+    position: relative;
+    display: inline-block;
+    font-family: 'MapoFlowerIsland', sans-serif;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center
+}
+
+/*.banner-text.withlove:before {*/
+/*    display: block;*/
+/*    font-family: "fontello";*/
+/*    position: absolute;*/
+/*    font-size: 22px;*/
+/*    color: #FFF;*/
+/*    content: "\e806";*/
+/*    top: -17px;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    margin-left: 19px;*/
+/*}*/
+
+.banner-text.withlove.dark:before {
+    color: #e1dddd;
+}
+
+/*.banner-text.withlove:after {*/
+/*    display: block;*/
+/*    font-family: "fontello";*/
+/*    position: absolute;*/
+/*    font-size: 22px;*/
+/*    color: #f0394d;*/
+/*    content: "\e806";*/
+/*    top: -17px;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    margin-right: 19px;*/
+/*}*/
