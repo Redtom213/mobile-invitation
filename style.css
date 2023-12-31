@@ -16,13 +16,17 @@ dt {
   font-weight: bold;
 }
 
+#map-canvas {
+    height: 560px;
+    width: 100%;
+}
+
 body {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'MapoFlowerIsland', sans-serif;
   /* font-family: 'Nanum Myeongjo', serif; */
   color: #444;
   font-size: 16px;
   background-color: #fff;
-  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -32,7 +36,7 @@ section {
 
 section h2 {
   font-size: 20px;
-  font-family: 'Nanum Myeongjo', serif;
+  font-family: 'MapoFlowerIsland', serif;
 }
 
 #title, #call, #gallery, #video, #location {
@@ -86,7 +90,7 @@ section h2 {
 #invitation .container {
   background: #fff;
   border-radius: 20px;
-  font-family: 'Nanum Myeongjo', serif;
+  font-family: 'MapoFlowerIsland', serif;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -114,7 +118,7 @@ section h2 {
 #call .banner {
   height: 90px;
   background: #999;
-  font-family: 'Nanum Myeongjo', serif;
+  font-family: 'MapoFlowerIsland', serif;
   line-height: 90px;
   text-align: center;
   font-size: 14px;
@@ -212,7 +216,7 @@ section h2 {
 }
 
 #video p {
-  font-family: 'Nanum Myeongjo', serif;
+  font-family: 'MapoFlowerIsland', serif;
   font-weight: bold;
   text-align: center;
   margin-top: 30px;
@@ -251,23 +255,105 @@ section h2 {
   margin-top: 20px;
 }
 
-footer {
-  background: #444;
-  color: #fff;
-  text-align: center;
-  font-size: 14px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+/* 07.2.7 IMAGE & VIDEO DIVIDER					 */
+/* ----------------------------------------------*/
+.divider-wrapper {
+    padding: 130px 0;
 }
 
-footer a {
-  font-size: 20px;
-  text-decoration: none;
-  color: #fff;
-  margin-bottom: 10px;
-  display: block;
+div {
+    word-break: keep-all;
 }
 
-footer p {
-  line-height: 24px;
+.image-divider {
+    position: relative;
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #000000;
+    -webkit-backface-visibility: hidden;
+}
+
+.image-divider.mobile {
+    background-attachment: scroll;
+}
+
+.video-divider {
+    position: relative;
+    color: #FFF;
+    z-index: 3;
+}
+
+.image-divider h1, .image-divider h2,
+.image-divider h3, .image-divider h4,
+.image-divider h5, .image-divider h6,
+.video-divider h1, .video-divider h2,
+.video-divider h3, .video-divider h4,
+.video-divider h5, .video-divider h6 {
+    color: #000;
+}
+
+
+.image-divider .divider-overlay,
+.video-divider .divider-overlay {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    opacity: 0.2
+}
+
+.image-divider.auto-height,
+.video-divider.auto-height {
+    height: 100%;
+    width: 100%;
+    padding: 150px 0;
+}
+
+.image-divider.fixed-height,
+.video-divider.fixed-height {
+    height: 700px;
+    width: 100%;
+    padding: 0;
+}
+
+/* ----------------------------------------------*/
+/* 12.5 Footer Section				 			 */
+/* ----------------------------------------------*/
+footer .image-divider.fixed-height {
+    height: 550px;
+}
+
+#thank-you {
+    text-align: center;
+    color: #FFF;
+    font-family: 'Pacifico';
+    -ms-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+    padding-right: 30px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+#thank {
+    font-size: 55px;
+    line-height: 45px
+}
+
+#you {
+    font-size: 55px;
+    line-height: 45px;
+}
+
+#footer-couple-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color: #FFF;
+    letter-spacing: 3px;
+    margin-top: 10px;
 }
