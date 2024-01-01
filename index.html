@@ -89,25 +89,19 @@
     <div class="container">
       <h2>갤러리</h2>
       <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-head">
-            <button>&times;</button>
-          </div>
-          <div class="wrap-modal-slider">
-            <div class="modalBox">
-              <div><img src="images/photo01.jpg" alt="1"></div>
-              <div><img src="images/photo02.jpg" alt="2"></div>
-              <div><img src="images/photo03.jpg" alt="3"></div>
-              <div><img src="images/photo04.jpg" alt="4"></div>
-              <div><img src="images/photo05.jpg" alt="5"></div>
-              <div><img src="images/photo06.jpg" alt="6"></div>
-              <div><img src="images/photo07.jpg" alt="7"></div>
-              <div><img src="images/photo08.jpg" alt="8"></div>
-              <div><img src="images/photo09.jpg" alt="9"></div>
-            </div>
-          </div>
+        <button>&times;</button>
+        <div class="modalBox">
+          <div><img src="images/photo01.jpg" alt="1"></div>
+          <div><img src="images/photo02.jpg" alt="2"></div>
+          <div><img src="images/photo03.jpg" alt="3"></div>
+          <div><img src="images/photo04.jpg" alt="4"></div>
+          <div><img src="images/photo05.jpg" alt="5"></div>
+          <div><img src="images/photo06.jpg" alt="6"></div>
+          <div><img src="images/photo07.jpg" alt="7"></div>
+          <div><img src="images/photo08.jpg" alt="8"></div>
+          <div><img src="images/photo09.jpg" alt="9"></div>
         </div>
-      </div>
+        </div>
       <ul class="galleryList">
         <li>
           <a href="#" class="img" onclick="modal();">
@@ -291,13 +285,6 @@
           const scrollPosition = window.pageYOffset;
           const body = document.querySelector('body');
 
-          $('.modalBox').slick({
-            arrows: false,
-            variableWidth: true,
-            centerMode: true,
-          });
-          $('.wrap-modal-slider').addClass('open');
-
           $(".img").click(function(){
               body.style.overflow = 'hidden';
               body.style.position = 'fixed';
@@ -306,7 +293,8 @@
               body.style.right= '0';
               $(".modal").show();
 
-              $('.modalBox').slick('slickGoTo', $(this).children("img").attr("alt")-1);
+              $('.modalBox').slick('slickGoTo', $(this).children("img").attr("alt")-1, true);
+              $('.wrap-modal-slider').addClass('open');
           });
 
           //.modal안에 button을 클릭하면 .modal닫기
@@ -335,6 +323,16 @@
           }
         });
       }
+
+      $(document).ready(function(){
+        $('.modalBox').slick({
+          arrows: false,
+          variableWidth: true,
+          centerMode: true,
+          slidesToShow: 1,
+          centerMode: true,
+        });
+      });
 
 
     </script>

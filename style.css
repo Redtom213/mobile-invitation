@@ -275,18 +275,9 @@ section h2 {
 	background-color: rgba(0, 0, 0, 0.7);
 }
 
-.modal-dialog {
-    top: 50%;
-    left: 0%;
-    transform: translate(0%, -50%);
-    background-color: rgba(0, 0, 0, 0);
-    text-align: center;
-    margin: 0px;
-}
-
 .modal button {
 	position: absolute;
-	top: 3rem;
+	top: 1rem;
 	right: 3rem;
 	background: transparent;
 	border: 0;
@@ -294,29 +285,39 @@ section h2 {
 	font-size: 3rem;
 }
 
-.wrap-modal-slider {
-  opacity: 0;
-  transition: all 0.3s;
+.modalBox {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
 }
 
-.wrap-modal-slider.open {
+.slick-track {
+  display: flex;
+}
+
+.slick-track .slick-slide {
+    opacity: 0;
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-track .slick-current {
     opacity: 1;
 }
 
-/* .modalBox {
-	position: relative;
-	top: 50%;
-	left: 50%;
-	background-color: #FFF;
-	transform: translate(-50%, -50%);
-	text-align: center;
-	background-color: rgba(0, 0, 0, 0);
-}
-*/
-
-.modalBox img {
-	max-height: 95vh;
-	max-width: 95vw;
+.slick-initialized .slick-slide {
+    float: inherit;
+    display: inline-block !important;
+    vertical-align: middle;
 }
 
-
+.slick-track .slick-slide img {
+    max-height: 90vh;
+    max-width: 95vw;
+    margin: 0 auto; /* it centers any block level element */
+}
