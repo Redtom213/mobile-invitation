@@ -44,8 +44,9 @@
   <section id="invitation">
     <div class="container">
       <h2>초대합니다</h2>
-      <p>서로가 첫 눈에 반해 연애를 시작했던 5월,<br>
-        둘이 함께 맞이하는 7번째 5월의 봄 날에<br>
+      <p>서로가 첫 눈에 반해<br>
+        인연이 시작됐던 5월,<br>
+        함께 맞이하는 7번째 5월의 봄 날에<br>
         저희 두 사람이 뜻 깊은 날을 맞게 되었습니다.<br>
       </p>
       <p>
@@ -83,53 +84,56 @@
 
   <section id="gallery">
     <div class="container">
-      <h2 >갤러리</h2>
-      <figure>
-        <img src="images/photo01.jpg" alt="대표이미지">
-      </figure>
+      <h2>갤러리</h2>
+      <div class="modal">
+        <button>&times;</button>
+        <div class="modalBox">
+          <img src="" alt="">
+        </div>
+      </div>
       <ul class="galleryList">
         <li>
-          <a href="#">
+          <a href="#" class="img" onclick="modal();">
             <img src="images/photo01.jpg" alt="1">
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="img" onclick="modal();">
             <img src="images/photo02.jpg" alt="2">
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="img" onclick="modal();">
             <img src="images/photo03.jpg" alt="3">
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="img" onclick="modal();">
             <img src="images/photo04.jpg" alt="4">
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="img" onclick="modal();">
             <img src="images/photo05.jpg" alt="5">
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="img" onclick="modal();">
             <img src="images/photo06.jpg" alt="6">
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="img" onclick="modal();">
             <img src="images/photo07.jpg" alt="7">
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="img" onclick="modal();">
             <img src="images/photo08.jpg" alt="8">
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="img" onclick="modal();">
             <img src="images/photo09.jpg" alt="9">
           </a>
         </li>
@@ -253,6 +257,32 @@
       function copy_to_clipboard(text) {
         navigator.clipboard.writeText(text).then(() => {
             alert("복사되었습니다.");
+        });
+      }
+
+      function modal(){
+          //이미지 클릭시 해당 이미지 모달
+          $(".img").click(function(){
+              $(".modal").show();
+              // 해당 이미지 가겨오기
+              var imgSrc = $(this).children("img").attr("src");
+              var imgAlt = $(this).children("img").attr("alt");
+              $(".modalBox img").attr("src", imgSrc);
+              $(".modalBox img").attr("alt", imgAlt);
+          });
+
+          //.modal안에 button을 클릭하면 .modal닫기
+          $(".modal button").click(function(){
+              $(".modal").hide();
+          });
+
+          //.modal밖에 클릭시 닫힘
+          $(".modal").click(function (e) {
+          if (e.target.className == "modal") {
+            return false;
+          } else {
+            $(".modal").hide();
+          }
         });
       }
     </script>
