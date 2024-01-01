@@ -273,7 +273,6 @@
               var imgAlt = $(this).children("img").attr("alt");
               $(".modalBox img").attr("src", imgSrc);
               $(".modalBox img").attr("alt", imgAlt);
-              $("html, body").addClass("not_scroll");
           });
 
           //.modal안에 button을 클릭하면 .modal닫기
@@ -281,6 +280,7 @@
               $(".modal").hide();
               body.style.removeProperty('position');
               window.scrollTo(0, scrollPosition);
+              body.style.zoom(1);
           });
 
           //.modal 클릭시 닫힘
@@ -291,6 +291,7 @@
               $(".modal").hide();
               body.style.removeProperty('position');
               window.scrollTo(0, scrollPosition);
+              body.style.zoom(1);
           }
         });
       }
