@@ -271,8 +271,17 @@ section h2 {
 	height: auto;
 	position: fixed;
 	top: 0;
-	left: 50%;
+	left: 0;
 	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-dialog {
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    margin: 0px;
 }
 
 .modal button {
@@ -285,7 +294,16 @@ section h2 {
 	font-size: 3rem;
 }
 
-.modalBox {
+.wrap-modal-slider {
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.wrap-modal-slider.open {
+    opacity: 1;
+}
+
+/* .modalBox {
 	position: relative;
 	top: 50%;
 	left: 50%;
@@ -294,6 +312,7 @@ section h2 {
 	text-align: center;
 	background-color: rgba(0, 0, 0, 0);
 }
+*/
 
 .modalBox img {
 	max-height: 95vh;

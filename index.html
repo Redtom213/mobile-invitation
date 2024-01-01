@@ -25,8 +25,11 @@
 
   <!-- Theme CSS -->
   <link href="./resources/style.css" rel="stylesheet" media="screen">
+
   <link rel="stylesheet" href="./resources/slick-theme.css" type="text/css">
   <link rel="stylesheet" href="./resources/slick.css" type="text/css">
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
   <style data-emotion="css" data-s=""></style>
   <link href="./resources/jquery-sakura.css" rel="stylesheet" type="text/css">
 </head>
@@ -85,10 +88,24 @@
   <section id="gallery">
     <div class="container">
       <h2>갤러리</h2>
-      <div class="modal">
-        <button>&times;</button>
-        <div class="modalBox">
-          <img src="" alt="">
+      <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-head">
+            <button>&times;</button>
+          </div>
+          <div class="wrap-modal-slider">
+            <div class="modalBox">
+              <div><img src="images/photo01.jpg" alt="1"></div>
+              <div><img src="images/photo02.jpg" alt="2"></div>
+              <div><img src="images/photo03.jpg" alt="3"></div>
+              <div><img src="images/photo04.jpg" alt="4"></div>
+              <div><img src="images/photo05.jpg" alt="5"></div>
+              <div><img src="images/photo06.jpg" alt="6"></div>
+              <div><img src="images/photo07.jpg" alt="7"></div>
+              <div><img src="images/photo08.jpg" alt="8"></div>
+              <div><img src="images/photo09.jpg" alt="9"></div>
+            </div>
+          </div>
         </div>
       </div>
       <ul class="galleryList">
@@ -274,6 +291,13 @@
           const scrollPosition = window.pageYOffset;
           const body = document.querySelector('body');
 
+          $('.modalBox').slick({
+            arrows: false,
+            variableWidth: true,
+            centerMode: true,
+          });
+          $('.wrap-modal-slider').addClass('open');
+
           $(".img").click(function(){
               body.style.overflow = 'hidden';
               body.style.position = 'fixed';
@@ -281,11 +305,8 @@
               body.style.left = '0';
               body.style.right= '0';
               $(".modal").show();
-              // 해당 이미지 가겨오기
-              var imgSrc = $(this).children("img").attr("src");
-              var imgAlt = $(this).children("img").attr("alt");
-              $(".modalBox img").attr("src", imgSrc);
-              $(".modalBox img").attr("alt", imgAlt);
+
+              $('.modalBox').slick('slickGoTo', $(this).children("img").attr("alt")-1);
           });
 
           //.modal안에 button을 클릭하면 .modal닫기
@@ -314,6 +335,8 @@
           }
         });
       }
+
+
     </script>
 </body>
 </html>
