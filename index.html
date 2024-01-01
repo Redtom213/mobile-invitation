@@ -35,7 +35,7 @@
     <img src="images/title.jpg" alt="title">
     <div class="introText">
       <div class="container" style="margin-right: 5px;">
-        <h2 style="font-size: 20px;">김태병0<br> 강희종</h2>
+        <h2 style="font-size: 20px;">김태병<br> 강희종</h2>
         <p>2024년 5월 19일<br>일요일 낮 12시 30분<br>더에스비웨딩컨벤션<br>전문건설회관 3층</p>
       </div>
     </div>
@@ -266,7 +266,11 @@
           const body = document.querySelector('body');
 
           $(".img").click(function(){
+              body.style.overflow = 'hidden';
               body.style.position = 'fixed';
+              body.style.top = `-${scrollPosition}px`;
+              body.style.left = '0';
+              body.style.right= '0';
               $(".modal").show();
               // 해당 이미지 가겨오기
               var imgSrc = $(this).children("img").attr("src");
@@ -278,9 +282,12 @@
           //.modal안에 button을 클릭하면 .modal닫기
           $(".modal button").click(function(){
               $(".modal").hide();
+              body.style.removeProperty('overflow');
               body.style.removeProperty('position');
+              body.style.removeProperty('top');
+              body.style.removeProperty('left');
+              body.style.removeProperty('right');
               window.scrollTo(0, scrollPosition);
-              body.style.zoom = "100%";
           });
 
           //.modal 클릭시 닫힘
@@ -289,9 +296,12 @@
               return false;
             } else {
               $(".modal").hide();
+              body.style.removeProperty('overflow');
               body.style.removeProperty('position');
+              body.style.removeProperty('top');
+              body.style.removeProperty('left');
+              body.style.removeProperty('right');
               window.scrollTo(0, scrollPosition);
-              body.style.zoom = "100%";
           }
         });
       }
