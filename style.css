@@ -321,3 +321,7 @@ section h2 {
     max-width: 95vw;
     margin: 0 auto; /* it centers any block level element */
 }
+
+.slick-slider {
+    touch-action: auto !important;
+}
